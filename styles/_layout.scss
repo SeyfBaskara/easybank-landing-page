@@ -1,0 +1,51 @@
+@mixin image-content($position, $width: 20px, $height: 20px) {
+   position: $position;
+   width: $width;
+   height: $height;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   position: relative;
+   background-color: whitesmoke;
+
+   .header__logo {
+      .header-image {
+         @include image-content(relative, 139px, 20px);
+      }
+   }
+
+   .header__navigation {
+      .navigation__close-icon {
+         @include image-content(relative, 18px, 19px);
+         right: -5rem;
+      }
+      .navigation__list {
+         background-color: lavender;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         position: absolute;
+         top: 4rem;
+         width: 90%;
+         height: 250px;
+         left: 1rem;
+         color: $Grayish-Blue;
+         font-weight: $weight-bold;
+         border-radius: 3px;
+      }
+   }
+
+   .header__right {
+      .header__menu-icon {
+         @include image-content(relative, 24px, 11px);
+      }
+      .header__right-btn {
+         display: none;
+      }
+   }
+}
