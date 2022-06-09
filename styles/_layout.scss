@@ -13,7 +13,7 @@
    background-color: whitesmoke;
 
    .header__logo {
-      .header-image {
+      .header__logo-image {
          @include image-content(relative, 139px, 20px);
       }
    }
@@ -46,6 +46,38 @@
       }
       .header__right-btn {
          display: none;
+      }
+   }
+}
+
+/* FOOTER SECTION */
+
+.footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(72, 117, 132);
+   .footer__logo {
+      .footer__logo-image {
+         @include image-content(relative, 139px, 20px);
+      }
+   }
+
+   .footer__icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .footer__icon {
+         @include image-content(relative, 20px, 20px);
+      }
+   }
+
+   .footer__navigation {
+      .footer__nav-list {
+         display: flex;
+         flex-direction: column;
+         gap: 0.8rem;
       }
    }
 }

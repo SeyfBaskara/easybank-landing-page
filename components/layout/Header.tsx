@@ -14,7 +14,7 @@ const Header: React.FC = () => {
    return (
       <header className="header">
          <section className="header__logo">
-            <div className="header-image">
+            <div className="header__logo-image">
                <Image src="/images/logo.svg" alt="logo icon" layout="fill" />
             </div>
          </section>
