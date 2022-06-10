@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
             </nav>
          </section>
          <section className="footer__request">
-            <button>Request Invite</button>
-            <p>&copy;Easybank. All Rights Reserved</p>
+            <button className="footer__request-btn">Request Invite</button>
+            <p className="footer__reserve-text">&copy;Easybank. All Rights Reserved</p>
          </section>
       </footer>
    )
