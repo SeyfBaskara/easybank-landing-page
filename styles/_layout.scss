@@ -14,7 +14,8 @@
    @include display-variables(flex, row, space-between, center);
    padding: 1rem;
    position: relative;
-   background-color: whitesmoke;
+   background-color: $White;
+   z-index: 10;
 
    .header__logo {
       .header__logo-image {
@@ -28,16 +29,17 @@
          right: -5rem;
       }
       .navigation__list {
-         background-color: lavender;
          @include display-variables(flex, column, space-around, center);
+         background-color: $White;
          position: absolute;
          top: 4rem;
          width: 90%;
-         height: 250px;
+         height: 300px;
          left: 1rem;
          color: $Grayish-Blue;
          font-weight: $weight-bold;
          border-radius: 3px;
+         filter: drop-shadow(3rem 10rem 10rem $Dark-Blue);
       }
    }
 
