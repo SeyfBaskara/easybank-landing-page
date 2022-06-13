@@ -13,7 +13,7 @@ const Main: React.FC = () => {
                   <Image src="/images/bg-intro-mobile.svg" alt="mobile icon" layout="fill" />
                </div>
                <div className="intro__mockup-img">
-                  <Image src="/images/image-mockups.png" alt="mobile icon api" width={350} height={450} />
+                  <Image src="/images/image-mockups.png" alt="mobile icon api" layout="fill" />
                </div>
             </div>
             <div className="intro__content">
