@@ -30,6 +30,17 @@ const Footer: React.FC = () => {
             <button className="footer__request-btn">Request Invite</button>
             <p className="footer__reserve-text">&copy;Easybank. All Rights Reserved</p>
          </section>
+         <section className="footer__attribution">
+            Challenge by
+            <a className="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
+               Frontend Mentor
+            </a>
+            . Coded by
+            <a className="footer__link" href="#" target="_blank" rel="noreferrer">
+               Seyfettin Baskara
+            </a>
+            .
+         </section>
       </footer>
    )
 }

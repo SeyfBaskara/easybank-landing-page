@@ -89,7 +89,6 @@
 
    .footer__request {
       @include display-variables(flex, column, center, center);
-      margin-bottom: 5rem;
       gap: 0.8rem;
       .footer__request-btn {
          background: $background-btn-gradient;
@@ -103,6 +102,16 @@
       .footer__reserve-text {
          color: $Grayish-Blue;
          font-size: 0.9rem;
+      }
+   }
+
+   .footer__attribution {
+      font-size: 0.65rem;
+      color: $Grayish-Blue;
+      margin: -2rem 0 6rem;
+      .footer__link {
+         font-weight: $weight-bold;
+         margin-left: 0.2rem;
       }
    }
 }
