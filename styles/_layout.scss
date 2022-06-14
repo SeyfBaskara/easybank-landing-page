@@ -10,12 +10,25 @@
    align-items: $align-items;
 }
 
+@mixin button-style {
+   background: $background-btn-gradient;
+   border: none;
+   border-radius: 2rem;
+   padding: 0.8rem 2rem;
+   color: $White;
+   font-size: 0.9rem;
+}
+
 .header {
    @include display-variables(flex, row, space-between, center);
    padding: 1rem;
    position: relative;
    background-color: $White;
    z-index: 10;
+
+   @include md {
+      justify-content: space-around;
+   }
 
    .header__logo {
       .header__logo-image {
@@ -24,9 +37,16 @@
    }
 
    .header__navigation {
+      @include md {
+         display: block !important;
+      }
       .navigation__close-icon {
          @include image-variables(relative, 18px, 19px);
          right: -5rem;
+
+         @include md {
+            display: none;
+         }
       }
       .navigation__list {
          @include display-variables(flex, column, space-around, center);
@@ -40,15 +60,34 @@
          font-weight: $weight-bold;
          border-radius: 3px;
          filter: drop-shadow(3rem 10rem 10rem $Dark-Blue);
+
+         @include md {
+            position: static;
+            flex-direction: row;
+            height: 0;
+            gap: 1rem;
+            font-weight: $weight-light;
+            font-size: 1rem;
+         }
       }
    }
 
    .header__right {
       .header__menu-icon {
          @include image-variables(relative, 24px, 11px);
+
+         @include md {
+            display: none !important;
+         }
       }
       .header__right-btn {
          display: none;
+
+         @include md {
+            display: block;
+            @include button-style;
+            padding: 0.5rem 1.2rem;
+         }
       }
    }
 }
@@ -60,11 +99,23 @@
    gap: 2rem;
    background-color: $Dark-Blue;
 
+   @include md {
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 230px;
+   }
+
    .footer__logo {
       @include display-variables(flex, column, center, center);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+
+      @include md {
+         margin: 0;
+         gap: 3rem;
+      }
       .footer__logo-image {
          @include image-variables(relative, 139px, 20px);
-         margin: 1.5rem 0;
          //NOTE this filter need to be apply correctly
          filter: invert(77%) sepia(100%) saturate(0%) hue-rotate(29deg) brightness(210%) contrast(101%);
       }
@@ -76,6 +127,11 @@
       gap: 1rem;
       .footer__icon {
          @include image-variables(relative, 24px, 24px);
+
+         @include md {
+            width: 20px;
+            height: 20px;
+         }
       }
    }
 
@@ -84,34 +140,49 @@
          @include display-variables(flex, column, center, center);
          gap: 0.8rem;
          color: $Grayish-Blue;
+
+         @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            width: 370px;
+            font-size: 0.9rem;
+         }
       }
    }
 
    .footer__request {
       @include display-variables(flex, column, center, center);
       gap: 0.8rem;
+
+      @include md {
+         align-items: flex-end;
+      }
       .footer__request-btn {
-         background: $background-btn-gradient;
-         border: none;
-         border-radius: 2rem;
-         padding: 0.8rem 2rem;
-         color: $White;
-         font-size: 0.9rem;
+         @include button-style;
+
+         @include md {
+            padding: 0.6rem 1.7rem;
+         }
       }
 
       .footer__reserve-text {
          color: $Grayish-Blue;
          font-size: 0.9rem;
       }
-   }
 
-   .footer__attribution {
-      font-size: 0.65rem;
-      color: $Grayish-Blue;
-      margin: -2rem 0 5rem;
-      .footer__link {
-         font-weight: $weight-bold;
-         margin-left: 0.2rem;
+      .footer__attribution {
+         font-size: 0.65rem;
+         color: $Grayish-Blue;
+         margin: -1rem 0 5rem;
+
+         @include md {
+            margin: -1rem 0 0;
+         }
+         .footer__link {
+            font-weight: $weight-bold;
+            margin-left: 0.2rem;
+         }
       }
    }
 }

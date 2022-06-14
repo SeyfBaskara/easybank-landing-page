@@ -1,10 +1,12 @@
-// layout
+// variables
 @import 'variables';
+
+// layout & breakpoints
 @import 'base';
+@import 'breakpoints';
 @import 'layout';
 
 // Home page
 @import 'main';
 
 //breakpoints
-@import 'breakpoints';
