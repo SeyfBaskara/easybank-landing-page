@@ -26,8 +26,8 @@
    background-color: $White;
    z-index: 10;
 
-   @include md-breakpoint {
-      // justify-content: space-around;
+   @include lg-breakpoint {
+      justify-content: space-around;
    }
 
    .header__logo {
@@ -69,6 +69,10 @@
             font-weight: $weight-light;
             font-size: 1rem;
          }
+
+         @include lg-breakpoint {
+            gap: 1rem;
+         }
       }
    }
 
@@ -105,6 +109,11 @@
       gap: 0;
       padding: 0 0.5rem;
       height: 230px;
+   }
+
+   @include lg-breakpoint {
+      justify-content: space-around;
+      padding: 0;
    }
 
    .footer__logo {
@@ -146,8 +155,11 @@
          @include md-breakpoint {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            // width: 370px;
             font-size: 0.9rem;
+         }
+
+         @include lg-breakpoint {
+            width: 300px;
          }
       }
    }
@@ -160,6 +172,11 @@
          align-items: flex-start;
          width: 240px;
       }
+      @include lg-breakpoint {
+         align-items: flex-end;
+         width: auto;
+      }
+
       .footer__request-btn {
          @include button-style;
 
