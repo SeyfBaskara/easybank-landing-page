@@ -151,11 +151,14 @@
             width: 80px;
             height: 80px;
             margin-top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
 
             @include md-breakpoint {
                width: 60px;
                height: 60px;
                margin-top: 1rem;
+               left: 1.5rem;
             }
          }
          .strategies__title {
