@@ -6,27 +6,27 @@ $breakpoints: (
    'xl': 1200px,
 );
 
-@mixin xs {
+@mixin xs-breakpoint {
    @media (min-width: map-get($breakpoints, 'xs')) {
       @content;
    }
 }
-@mixin sm {
+@mixin sm-breakpoint {
    @media (min-width: map-get($breakpoints, 'sm')) {
       @content;
    }
 }
-@mixin md {
+@mixin md-breakpoint {
    @media (min-width: map-get($breakpoints, 'md')) {
       @content;
    }
 }
-@mixin lg {
+@mixin lg-breakpoint {
    @media (min-width: map-get($breakpoints, 'lg')) {
       @content;
    }
 }
-@mixin xl {
+@mixin xl-breakpoint {
    @media (min-width: map-get($breakpoints, 'xl')) {
       @content;
    }

@@ -8,9 +8,12 @@ const Main: React.FC = () => {
    return (
       <article className="main">
          <section className="main__intro">
-            <div>
-               <div className="intro-img">
+            <div className="main__image-wrapper">
+               <div className="intro__mobile-img">
                   <Image src="/images/bg-intro-mobile.svg" alt="mobile icon" layout="fill" />
+               </div>
+               <div className="intro__desktop-img">
+                  <Image src="/images/bg-intro-desktop.svg" alt="desktop icon" layout="fill" />
                </div>
                <div className="intro__mockup-img">
                   <Image src="/images/image-mockups.png" alt="mobile icon api" layout="fill" />
@@ -31,7 +34,7 @@ const Main: React.FC = () => {
                {data.main.features.strategies.map((strategy, index) => (
                   <div key={index}>
                      <div className="strategies-img">
-                        <Image src={strategy.image} alt={strategy.title} width={80} height={80} />
+                        <Image src={strategy.image} alt={strategy.title} layout="fill" />
                      </div>
                      <h3 className="strategies__title">{strategy.title}</h3>
                      <p className="strategies__desc">{strategy.description}</p>

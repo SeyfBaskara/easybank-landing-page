@@ -9,34 +9,91 @@
 }
 
 .main {
+   overflow: hidden;
    .main__intro {
       position: relative;
-      .intro-img {
-         position: relative;
-         width: 100%;
-         height: 475px;
-         top: -4.5rem;
+
+      @include md-breakpoint {
+         display: flex;
+         flex-direction: row-reverse;
+         height: 500px;
+      }
+      .main__image-wrapper {
+         @include md-breakpoint {
+            flex: 1.5;
+         }
+         .intro__mobile-img {
+            position: relative;
+            width: 100%;
+            height: 475px;
+            top: -4.5rem;
+
+            @include md-breakpoint {
+               display: none;
+            }
+         }
+
+         .intro__desktop-img {
+            display: none;
+
+            @include md-breakpoint {
+               display: block;
+               position: relative;
+               width: 100%;
+               height: 550px;
+               top: -8rem;
+               right: -5rem;
+            }
+         }
+
+         .intro__mockup-img {
+            position: relative;
+            width: 100%;
+            height: 475px;
+            top: -34.5rem;
+
+            @include md-breakpoint {
+               position: relative;
+               width: 90%;
+               height: 500px;
+               top: -34rem;
+               right: -7rem;
+            }
+         }
       }
 
-      .intro__mockup-img {
-         position: relative;
-         width: 100%;
-         height: 450px;
-         top: -34.5rem;
-      }
       .intro__content {
          margin-top: -34rem;
          text-align: center;
+
+         @include md-breakpoint {
+            margin: 0;
+            padding-top: 1rem;
+            text-align: left;
+            width: 300px;
+            position: relative;
+            left: 1rem;
+         }
 
          .content__title {
             font-size: 2.3rem;
             font-weight: $weight-light;
             color: $Dark-Blue;
             margin-bottom: 0;
+
+            @include md-breakpoint {
+               font-size: 1.7rem;
+            }
          }
          .content__description {
             @include description-font(0.9rem);
             margin-bottom: 2rem;
+            padding: 0 1rem;
+
+            @include md-breakpoint {
+               padding: 0;
+               margin-bottom: 1rem;
+            }
          }
          .content__invite-btn {
             background: $background-btn-gradient;
@@ -54,29 +111,67 @@
       background-color: $Light-Grayish-Blue;
       margin: 4rem 0;
 
+      @include md-breakpoint {
+         text-align: left;
+         margin-top: -9rem;
+         padding: 0 1rem;
+      }
+
       .features__header {
          .features__header-title {
             padding-top: 4rem;
             font-size: 2rem;
             @include title-font;
+
+            @include md-breakpoint {
+               font-size: 1.5rem;
+            }
          }
          .features__header-desc {
             @include description-font(0.9rem);
+            padding: 0 1rem;
+
+            @include md-breakpoint {
+               padding: 0;
+               width: 500px;
+            }
          }
       }
 
       .features__strategies {
          padding-bottom: 4rem;
 
+         @include md-breakpoint {
+            display: flex;
+            gap: 1rem;
+         }
+
          .strategies-img {
+            position: relative;
+            width: 80px;
+            height: 80px;
             margin-top: 2rem;
+
+            @include md-breakpoint {
+               width: 60px;
+               height: 60px;
+               margin-top: 1rem;
+            }
          }
          .strategies__title {
             @include title-font;
+
+            @include md-breakpoint {
+               font-size: 1rem;
+            }
          }
          .strategies__desc {
             @include description-font(0.9rem);
             margin: 0 0.8rem;
+
+            @include md-breakpoint {
+               margin: 0;
+            }
          }
       }
    }
@@ -87,6 +182,12 @@
             font-size: 2rem;
             @include title-font;
             text-align: center;
+
+            @include md-breakpoint {
+               text-align: left;
+               padding-left: 1rem;
+               font-size: 1.5rem;
+            }
          }
       }
 
@@ -94,10 +195,20 @@
          padding: 0 1rem;
          margin-bottom: 4rem;
 
+         @include md-breakpoint {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+         }
+
          .post__content {
             margin-bottom: 1.2rem;
             border-radius: 5px;
             box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem $Light-Grayish-Blue;
+
+            @include md-breakpoint {
+               width: 48%;
+            }
 
             .post__img {
                position: relative;
@@ -105,6 +216,10 @@
                height: 200px;
                border-radius: 5px 5px 0 0;
                overflow: hidden;
+
+               @include md-breakpoint {
+                  height: 150px;
+               }
             }
             .post__createdby {
                padding: 0 1rem;
