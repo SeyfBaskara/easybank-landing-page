@@ -47,7 +47,11 @@
 
             @include large-screen {
                height: 600px;
-               right: -15rem;
+               right: -10rem;
+            }
+
+            @include xlarge-screen {
+               right: -16rem;
             }
          }
 
@@ -58,7 +62,6 @@
             top: -34.5rem;
 
             @include medium-screen {
-               position: relative;
                width: 90%;
                height: 500px;
                top: -34rem;
@@ -68,7 +71,10 @@
                width: 70%;
                height: 650px;
                top: -40rem;
-               right: -23rem;
+               right: -16rem;
+            }
+            @include xlarge-screen {
+               right: -24rem;
             }
          }
       }
@@ -87,7 +93,11 @@
          }
 
          @include large-screen {
-            left: 7rem;
+            left: 5rem;
+         }
+
+         @include xlarge-screen {
+            left: 6rem;
          }
 
          .content__title {
@@ -121,6 +131,11 @@
             padding: 0.8rem 2rem;
             color: $White;
             font-size: 0.9rem;
+            cursor: pointer;
+
+            &:hover {
+               opacity: 0.7;
+            }
          }
       }
    }
@@ -137,10 +152,14 @@
       }
       @include large-screen {
          margin-top: -6.5rem;
-         padding: 0 7rem;
       }
 
       .features__header {
+         @include large-screen {
+            width: 85%;
+            margin: 0 auto;
+         }
+
          .features__header-title {
             padding-top: 4rem;
             font-size: 2rem;
@@ -175,6 +194,8 @@
 
          @include large-screen {
             gap: 1.5rem;
+            width: 85%;
+            margin: 0 auto;
          }
 
          .strategies-img {
@@ -212,7 +233,8 @@
 
    .main__articles {
       @include large-screen {
-         padding: 0 6rem;
+         width: 85%;
+         margin: 0 auto;
       }
       .articles__header {
          .articles__header-title {
@@ -273,6 +295,11 @@
                font-size: 1rem;
                padding: 0 1rem;
                margin: 0;
+               cursor: pointer;
+
+               &:hover {
+                  color: $Lime-Green;
+               }
             }
             .post__desc {
                @include description-font(0.8rem);

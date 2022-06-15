@@ -10,13 +10,13 @@ const Main: React.FC = () => {
          <section className="main__intro">
             <div className="main__image-wrapper">
                <div className="intro__mobile-img">
-                  <Image src="/images/bg-intro-mobile.svg" alt="mobile icon" layout="fill" />
+                  <Image src="/images/bg-intro-mobile.svg" alt="mobile icon" layout="fill" priority />
                </div>
                <div className="intro__desktop-img">
-                  <Image src="/images/bg-intro-desktop.svg" alt="desktop icon" layout="fill" />
+                  <Image src="/images/bg-intro-desktop.svg" alt="desktop icon" layout="fill" priority />
                </div>
                <div className="intro__mockup-img">
-                  <Image src="/images/image-mockups.png" alt="mobile icon api" layout="fill" />
+                  <Image src="/images/image-mockups.png" alt="mobile icon api" layout="fill" priority />
                </div>
             </div>
             <div className="intro__content">
